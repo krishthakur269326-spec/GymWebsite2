@@ -49,11 +49,7 @@ const ProgramSection = () => {
           const Icon = service.icon;
 
           return (
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true, margin: "-80px" }}
+            <div
               key={service.title}
               className="glass-card h-full group flex flex-col overflow-hidden"
             >
@@ -86,7 +82,7 @@ const ProgramSection = () => {
                   <ArrowRight className="transition-transform group-hover:translate-x-2" />
                 </NavLink>
               </div>
-            </motion.div>
+            </div>
           );
         })}
       </div>
