@@ -10,6 +10,8 @@ const OurStorySection = () => {
           <img
             src={usbg}
             alt=""
+            loading="lazy"
+            decoding="async"
             className="rounded-2xl border border-white/10 md:h-[90%] md:w-[90%]"
           />
         </div>

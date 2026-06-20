@@ -52,15 +52,18 @@ const ProgramSection = () => {
             <motion.div
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ type: "spring", stiffness: 100, damping: 15, delay: i * 0.1 }}
+              transition={{ type: "tween", ease: "easeOut", duration: 0.5, delay: i * 0.1 }}
               viewport={{ once: true, margin: "-80px" }}
               key={service.title}
               className="glass-card h-full group flex flex-col overflow-hidden"
+              style={{ willChange: "transform, opacity" }}
             >
               <div className="h-55 w-full overflow-hidden">
                 <img
                   src={service.image}
                   alt={service.title}
+                  loading="lazy"
+                  decoding="async"
                   className="h-full w-full object-cover transition duration-500 group-hover:scale-110"
                 />
               </div>

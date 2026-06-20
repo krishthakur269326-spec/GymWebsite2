@@ -123,6 +123,8 @@ const Gallery = () => {
               <img
                 src={item.image}
                 alt={item.label}
+                loading="lazy"
+                decoding="async"
                 onClick={() => setSelectedImage(item.id)}
                 className="w-full h-full object-cover hover:brightness-110 transition-all duration-500 group-hover:scale-110"
               />

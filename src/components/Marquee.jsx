@@ -21,6 +21,7 @@ export default function Marquee() {
   return (
     <section className="py-6 border border-y-white/30 overflow-hidden bg-black font-bold ">
       <motion.div className="whitespace-nowrap flex gap-12 font-display text-3xl md:text-5xl tracking-tighter"
+      style={{ willChange: "transform" }}
       animate={{
         x:['0%','-50%']
       }}

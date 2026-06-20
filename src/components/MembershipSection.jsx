@@ -114,9 +114,10 @@ const MembershipSection = () => {
             <motion.div
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ type: "spring", stiffness: 100, damping: 15, delay: i * 0.1 }}
+              transition={{ type: "tween", ease: "easeOut", duration: 0.5, delay: i * 0.1 }}
               viewport={{ once: true, margin: "-80px" }}
               key={plan.id}
+              style={{ willChange: "transform, opacity" }}
               className={`relative rounded-2xl border p-6 flex flex-col min-h-130 transition-all duration-300 ${plan.popular
                 ? "border-white/30 bg-linear-to-b from-white/15 to-black/5"
                 : plan.bestValue

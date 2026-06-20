@@ -30,22 +30,25 @@ const AllServiceSection = () => {
       </div>
 
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-        {services.map((service) => {
+        {services.map((service, i) => {
           const Icon = service.icon;
 
           return (
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
+              transition={{ type: "tween", ease: "easeOut", duration: 0.5, delay: i * 0.1 }}
               viewport={{ once: true, margin: "-80px" }}
               key={service.title}
               className="glass-card h-full group flex flex-col overflow-hidden"
+              style={{ willChange: "transform, opacity" }}
             >
               <div className="h-55 w-full overflow-hidden">
                 <img
                   src={service.image}
                   alt={service.title}
+                  loading="lazy"
+                  decoding="async"
                   className="h-full w-full object-cover transition duration-500 group-hover:scale-110"
                 />
               </div>
