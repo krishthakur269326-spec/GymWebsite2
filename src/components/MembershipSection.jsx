@@ -114,7 +114,7 @@ const MembershipSection = () => {
             <motion.div
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ type: "tween", ease: "easeOut", duration: 0.5, delay: i * 0.1 }}
+              transition={{ type: "spring", stiffness: 100, damping: 15, delay: i * 0.1 }}
               viewport={{ once: true, margin: "-80px" }}
               key={plan.id}
               style={{ willChange: "transform, opacity" }}

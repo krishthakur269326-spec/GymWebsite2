@@ -80,7 +80,7 @@ const AboutSection = () => {
               <motion.div
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ type: "tween", ease: "easeOut", duration: 0.5, delay: i * 0.1 }}
+                transition={{ type: "spring", stiffness: 100, damping: 15, delay: i * 0.1 }}
                 viewport={{ once: true, margin: "-80px" }}
                 key={i} className="bg-black/60 backdrop-blur-md p-5 md:p-6"
                 style={{ willChange: "transform, opacity" }}>

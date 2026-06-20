@@ -34,14 +34,9 @@ const AllServiceSection = () => {
           const Icon = service.icon;
 
           return (
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ type: "tween", ease: "easeOut", duration: 0.5, delay: i * 0.1 }}
-              viewport={{ once: true, margin: "-80px" }}
+            <div
               key={service.title}
               className="glass-card h-full group flex flex-col overflow-hidden"
-              style={{ willChange: "transform, opacity" }}
             >
               <div className="h-55 w-full overflow-hidden">
                 <img
@@ -64,7 +59,7 @@ const AllServiceSection = () => {
                   {service.description}
                 </p>
               </div>
-            </motion.div>
+            </div>
           );
         })}
       </div>
