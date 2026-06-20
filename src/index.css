@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --font-bebas: "Bebas Neue", sans-serif;
+}
+
+:root {
+  --b-color: #020202;
+  --lb-color: #b2d5e5;
+  --p-color: #20a7db;
+  --w-color: #fafafa;
+}
+.font-display {
+  font-family: "Bebas Neue", "Anton", sans-serif;
+  letter-spacing: 0.01em;
+}
+.floating-orb {
+  filter: blur(40px);
+  pointer-events: none;
+  background: radial-gradient(circle, #ffffff20, #0000 70%);
+  background: radial-gradient(circle, #ffffff20, #0000 70%);
+  border-radius: 9999px;
+  position: absolute;
+}
+.text-glow {
+  text-shadow: 0 0 30px #ffffff59;
+  text-shadow: 0 0 30px lab(100% 0 0 / 0.35);
+}
+.neon-btn {
+  color: white;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  background: #ffffff05;
+  border: 1px solid #fff9;
+  border: 1px solid lab(100% 0 0 / 0.6);
+  border-radius: 999px;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.6rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  transition: all 0.35s;
+  display: inline-flex;
+}
+.neon-btn-solid {
+  color: #010101;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  box-shadow: #ffffff40;
+  background: #fff;
+  border-radius: 999px;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.6rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  transition: all 0.35s;
+  display: inline-flex;
+}
+.neon-btn-solid:hover {
+  box-shadow: #ffffff59;
+  transform: translateY(-2px);
+}
+.neon-btn:hover {
+  color: #010101;
+  box-shadow: #ffffff59;
+  background: #fff;
+  transform: translateY(-2px);
+}
+.glass-card {
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+  background: linear-gradient(#070707b3, #02020299);
+  border: 2px solid #ffffff12;
+  border-radius: 18px;
+  transition: all 0.5s;
+}
+.glass-card:hover {
+  box-shadow: 0 0 18px #ffffff40;
+  border-color: #ffffff40;
+  transform: translateY(-4px);
+}
+.neon-border {
+  border: 1px solid #ffffff26;
+  border: 1px solid lab(100% 0 0 / 0.15);
+  box-shadow:
+    inset 0 0 0 1px #ffffff05,
+    0 0 0 1px #ffffff0a;
+}
+.glass {
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
+  backdrop-filter: blur(18px) saturate(140%);
+  background: #0303038c;
+  border: 1px solid #ffffff14;
+  border: 1px solid lab(100% 0 0 / 0.08);
+}
+.glass-card {
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+  background: linear-gradient(135deg, #ffffff0a, #ffffff03);
+  border: 1px solid #ffffff12;
+  border-radius: 18px;
+  transition: all 0.5s;
+}
+@keyframes pulse-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 30px #00bfff40;
+  }
+  50% {
+    box-shadow: 0 0 60px #00bfff8c;
+  }
+}
+.pulse-glow {
+    animation: 3.5s ease-in-out infinite pulse-glow;
+}
