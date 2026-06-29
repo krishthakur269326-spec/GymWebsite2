@@ -1,11 +1,13 @@
 // src/components/routes.js
-import Home from "../pages/Home"
-import About from "../pages/About"
-import Service from "../pages/Service"
-import Gallery from "../pages/Gallery"
-import Membership from "../pages/Membership"
-import Contact from "../pages/Contact"
-import Policy from "../pages/Policy"
+import { lazy } from "react";
+
+const Home = lazy(() => import("../pages/Home"));
+const About = lazy(() => import("../pages/About"));
+const Service = lazy(() => import("../pages/Service"));
+const Gallery = lazy(() => import("../pages/Gallery"));
+const Membership = lazy(() => import("../pages/Membership"));
+const Contact = lazy(() => import("../pages/Contact"));
+const Policy = lazy(() => import("../pages/Policy"));
 
 const routes = [
   {

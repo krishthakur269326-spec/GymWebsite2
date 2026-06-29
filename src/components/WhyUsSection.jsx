@@ -7,7 +7,7 @@ import {
   Users,
   Clock3,
 } from "lucide-react";
-import img from "../assets/gym-floor.jpg";
+import img from "../assets/gymfloor.webp";
 import { motion } from "motion/react";
 
 const WhyUsSection = () => {
@@ -50,6 +50,7 @@ const WhyUsSection = () => {
           <img
             src={img}
             alt=""
+            loading="lazy"
             className="rounded-2xl border border-white/10"
           />
           <div className="absolute -bottom-6 -right-6 glass p-6 rounded-xl">
@@ -62,33 +63,29 @@ const WhyUsSection = () => {
           </div>
         </div>
         <div>
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            viewport={{ once: true, margin: "-80px" }}
-            className="mb-4 tracking-[0.35em] uppercase text-[#20A7DB] text-[0.7rem] md:text-[0.9rem] lg:text-[1.1rem]"
-          >
-            Why Platinum Fitness
-          </motion.p>
-          <motion.h2
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            viewport={{ once: true, margin: "-80px" }}
-            className="font-display text-white font-black text-4xl md:text-5xl leading-[1.05]"
-          >
-            Elite Coaching. <br />
-            Premium Equipment. <br />
-            Extraordinary Results.
-          </motion.h2>
+            viewport={{ once: true, margin: "-80px" }}>
+            <p className="mb-4 tracking-[0.35em] uppercase text-[#20A7DB] text-[0.7rem] md:text-[0.9rem] lg:text-[1.1rem]"
+            >
+              Why Platinum Fitness
+            </p>
+            <h2 className="font-display text-white font-black text-4xl md:text-5xl leading-[1.05]"
+            >
+              Elite Coaching. <br />
+              Premium Equipment. <br />
+              Extraordinary Results.
+            </h2>
+          </motion.div>
           <div className="mt-10 grid sm:grid-cols-2 gap-6">
             {features.map((feature, i) => {
               const Icon = feature.icon;
               return (
                 <motion.div className="flex gap-4"
-                  initial={{ opacity: 0, y: 50 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0, x: 50 }}
+                  whileInView={{ opacity: 1, x: 0 }}
                   transition={{ type: "spring", stiffness: 100, damping: 15, delay: i * 0.1 }}
                   viewport={{ once: true, margin: "-80px" }}
                   key={i}>

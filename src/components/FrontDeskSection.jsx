@@ -26,7 +26,7 @@ const FrontDeskSection = () => {
         </motion.h2>
       </div>
       <div className="mx-auto">
-        <img src={frontdesk} alt="" className="rounded-2xl lg:w-3xl" />
+        <img src={frontdesk} alt="" loading="lazy" className="rounded-2xl lg:w-3xl" />
       </div>
     </section>
   );

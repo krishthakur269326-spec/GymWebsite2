@@ -11,10 +11,12 @@
   --p-color: #20a7db;
   --w-color: #fafafa;
 }
+
 .font-display {
   font-family: "Bebas Neue", "Anton", sans-serif;
   letter-spacing: 0.01em;
 }
+
 .floating-orb {
   filter: blur(40px);
   pointer-events: none;
@@ -23,10 +25,12 @@
   border-radius: 9999px;
   position: absolute;
 }
+
 .text-glow {
   text-shadow: 0 0 30px #ffffff59;
   text-shadow: 0 0 30px lab(100% 0 0 / 0.35);
 }
+
 .neon-btn {
   color: white;
   letter-spacing: 0.12em;
@@ -46,6 +50,7 @@
   transition: all 0.35s;
   display: inline-flex;
 }
+
 .neon-btn-solid {
   color: #010101;
   letter-spacing: 0.12em;
@@ -62,16 +67,19 @@
   transition: all 0.35s;
   display: inline-flex;
 }
+
 .neon-btn-solid:hover {
   box-shadow: #ffffff59;
   transform: translateY(-2px);
 }
+
 .neon-btn:hover {
   color: #010101;
   box-shadow: #ffffff59;
   background: #fff;
   transform: translateY(-2px);
 }
+
 .glass-card {
   -webkit-backdrop-filter: blur(14px);
   backdrop-filter: blur(14px);
@@ -80,11 +88,13 @@
   border-radius: 18px;
   transition: all 0.5s;
 }
+
 .glass-card:hover {
   box-shadow: 0 0 18px #ffffff40;
   border-color: #ffffff40;
   transform: translateY(-4px);
 }
+
 .neon-border {
   border: 1px solid #ffffff26;
   border: 1px solid lab(100% 0 0 / 0.15);
@@ -92,6 +102,7 @@
     inset 0 0 0 1px #ffffff05,
     0 0 0 1px #ffffff0a;
 }
+
 .glass {
   -webkit-backdrop-filter: blur(18px) saturate(140%);
   backdrop-filter: blur(18px) saturate(140%);
@@ -99,6 +110,7 @@
   border: 1px solid #ffffff14;
   border: 1px solid lab(100% 0 0 / 0.08);
 }
+
 .glass-card {
   -webkit-backdrop-filter: blur(14px);
   backdrop-filter: blur(14px);
@@ -106,16 +118,4 @@
   border: 1px solid #ffffff12;
   border-radius: 18px;
   transition: all 0.5s;
-}
-@keyframes pulse-glow {
-  0%,
-  100% {
-    box-shadow: 0 0 30px #00bfff40;
-  }
-  50% {
-    box-shadow: 0 0 60px #00bfff8c;
-  }
-}
-.pulse-glow {
-    animation: 3.5s ease-in-out infinite pulse-glow;
 }

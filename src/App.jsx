@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import Navbar from "./components/Navbar";
 import { Routes, Route } from "react-router";
 import routes from "./components/routes";
@@ -8,15 +8,17 @@ const App = () => {
   return (
     <main>
       <Navbar />
-      <Routes>
-        {routes.map((route) => {
-          const Page = route.element;
+      <Suspense fallback={<div className="min-h-screen flex items-center justify-center bg-black text-white">Loading...</div>}>
+        <Routes>
+          {routes.map((route) => {
+            const Page = route.element;
 
-          return (
-            <Route key={route.path} path={route.path} element={<Page />} />
-          );
-        })}
-      </Routes>
+            return (
+              <Route key={route.path} path={route.path} element={<Page />} />
+            );
+          })}
+        </Routes>
+      </Suspense>
       <Footer/>
     </main>
   );
