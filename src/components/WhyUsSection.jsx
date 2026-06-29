@@ -44,7 +44,7 @@ const WhyUsSection = () => {
     },
   ];
   return (
-    <section className="bg-black relative min-h-[80vh] overflow-hidden px-6 md:px-8 lg:px-30 py-16 border border-b-white/5">
+    <section className="bg-[#101010] relative min-h-[80vh] overflow-hidden px-6 md:px-8 lg:px-30 py-16 border border-b-white/5">
       <div className="grid lg:grid-cols-2 gap-16 items-center">
         <div className="relative">
           <img
