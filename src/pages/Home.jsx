@@ -7,18 +7,20 @@ import WhyUsSection from "../components/WhyUsSection";
 import InsideGymSection from "../components/InsideGymSection";
 import ReviewSection from "../components/ReviewSection";
 import JoinSection from "../components/JoinSection";
+import CertifiedTrainer from "../components/CertifiedTrainer";
 
 const Home = () => {
   return (
     <>
-      <HeroSection/>
-      <Marquee/>
-      <AboutSection/>
-      <ServicesSection/>
-      <WhyUsSection/>
-      <InsideGymSection/>
-      <ReviewSection/>
-      <JoinSection/>
+      <HeroSection />
+      <Marquee />
+      <AboutSection />
+      <ServicesSection />
+      <CertifiedTrainer />
+      <WhyUsSection />
+      <InsideGymSection />
+      <ReviewSection />
+      <JoinSection />
     </>
   );
 };

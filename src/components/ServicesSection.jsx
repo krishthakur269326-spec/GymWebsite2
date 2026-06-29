@@ -7,42 +7,20 @@ import { motion } from "motion/react";
 const ProgramSection = () => {
   return (
     <section className="bg-[#101010] relative min-h-svh overflow-hidden px-6 md:px-8 lg:px-30 py-16 border-b border-white/5">
-      <div className="grid md:grid-cols-[1fr_auto] items-end gap-8 mb-16">
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.2 }}
+        viewport={{ once: true, margin: "-80px" }}
+        className="grid md:grid-cols-[1fr_auto] items-end gap-8 mb-16">
         <div>
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            viewport={{ once: true, margin: "-80px" }}
-            className="mb-4 tracking-[0.35em] uppercase text-[#20A7DB] text-[0.7rem] md:text-[0.9rem] lg:text-[1.1rem]"
-          >
-            Our Services
-          </motion.div>
-
-          <motion.h2
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            viewport={{ once: true, margin: "-80px" }}
-            className="font-display text-white font-black text-4xl md:text-6xl leading-none"
-          >
-            Train with intent.
-            <br />
-            Built for results.
-          </motion.h2>
+          <div className="mb-4 tracking-[0.35em] uppercase text-[#20A7DB] text-[0.7rem] md:text-[0.9rem] lg:text-[1.1rem]">Our Services</div>
+          <h2 className="font-display text-white font-black text-4xl md:text-6xl leading-none">Train with intent.<br />Built for results.</h2>
         </div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          viewport={{ once: true, margin: "-80px" }}
-        >
-          <NavLink to="/service" className="neon-btn">
-            All Services
-          </NavLink>
-        </motion.div>
-      </div>
+        <div>
+          <NavLink to="/service" className="neon-btn">All Services</NavLink>
+        </div>
+      </motion.div>
 
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
         {services.slice(0, 4).map((service, i) => {

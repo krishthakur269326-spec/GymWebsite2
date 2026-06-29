@@ -29,7 +29,7 @@ const AboutSection = () => {
         <div>
           <div className="w-full max-w-4xl mx-auto aspect-video">
             <iframe
-              className="w-full h-full rounded-xl"
+              className="w-full h-full rounded-xl pointer-events-none"
               src="https://www.youtube.com/embed/29ix5ABj8RA?autoplay=1&mute=1&loop=1&playlist=29ix5ABj8RA"
               title="YouTube video player"
               frameBorder="0"
